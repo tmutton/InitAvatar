@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitAvatar", "InitAvatar\InitAvatar.csproj", "{E2BC1578-B6FA-4357-9B2B-5E945591A818}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitAvatar.Tests", "InitAvatar.Tests\InitAvatar.Tests.csproj", "{3DD76A4F-B19F-427F-A5B3-1856709799C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2BC1578-B6FA-4357-9B2B-5E945591A818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2BC1578-B6FA-4357-9B2B-5E945591A818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2BC1578-B6FA-4357-9B2B-5E945591A818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2BC1578-B6FA-4357-9B2B-5E945591A818}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DD76A4F-B19F-427F-A5B3-1856709799C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DD76A4F-B19F-427F-A5B3-1856709799C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DD76A4F-B19F-427F-A5B3-1856709799C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DD76A4F-B19F-427F-A5B3-1856709799C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {998AF9F7-0961-4C16-A95B-E128AA786752}
+	EndGlobalSection
+EndGlobal
