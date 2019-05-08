@@ -7,7 +7,7 @@ namespace InitAvatar
 {
     public class AvatarInitials: IAvatar
     {
-        private AvatarSettings AvatarSettings { get; set; }
+        private AvatarSettings AvatarSettings;
 
         public AvatarInitials(AvatarSettings avatarSettings)
         {
