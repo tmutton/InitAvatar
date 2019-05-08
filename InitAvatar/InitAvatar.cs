@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 
@@ -17,27 +18,29 @@ namespace InitAvatar
         {
             Stream stream = new MemoryStream();
 
-            var bitmap = new Bitmap(width, height);
+            using (var bitmap = new Bitmap(width, height))
+            {
+                using (var graphic = Graphics.FromImage(bitmap))
+                {
+                    var brush = new SolidBrush(this.AvatarSettings.BackgroundColour);
 
-            var graphic = Graphics.FromImage(bitmap);
+                    var rect = new Rectangle(0, 0, width, height);
 
-            var brush = new SolidBrush(this.AvatarSettings.BackgroundColour);
+                    graphic.FillRectangle(brush, rect);
 
-            var rect = new Rectangle(0, 0, width, height);
+                    graphic.Save();
 
-            graphic.FillRectangle(brush, rect);
+                    stream.Position = 0;
 
-            graphic.Save();
+                    bitmap.Save(stream, ImageFormat.Jpeg);
 
-            graphic.Dispose();
+                    return stream;
+                }
 
-            stream.Position = 0;
 
-            bitmap.Save(stream, ImageFormat.Jpeg);
+            }
 
-            bitmap.Dispose();
 
-            return stream;
         }
     }
 }

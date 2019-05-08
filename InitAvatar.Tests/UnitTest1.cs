@@ -18,15 +18,13 @@ namespace InitAvatar.Tests
                 Initials = initials
             };
 
-            var drawing = new AvatarInitials(avatarSettings).Draw(500, 500);
-
-            var img = Image.FromStream(drawing);
-
-            img.Save("test.jpg");
-
-            drawing.Dispose();
-
-            img.Dispose();
+            using (var drawing = new AvatarInitials(avatarSettings).Draw(500, 500))
+            {
+                using (var img = Image.FromStream(drawing))
+                {
+                    img.Save("test.jpg");
+                }
+            }   
         }
     }
 }
